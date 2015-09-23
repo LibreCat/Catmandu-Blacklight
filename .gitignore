@@ -1,0 +1,6 @@
+Catmandu-Blacklight-*
+/.build
+!META.json
+LICENSE
+local
+cpanfile.snapshot
