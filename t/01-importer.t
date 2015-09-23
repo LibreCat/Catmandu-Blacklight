@@ -3,6 +3,12 @@ use warnings;
 use Catmandu::Importer::Blacklight;
 use Test::More;
 
+BEGIN {
+    use_ok 'Catmandu::Importer::Blacklight';
+}
+
+require_ok 'Catmandu::Importer::Blacklight';
+
 # skip live testing by default (mock server instead)
 if ($ENV{RELEASE_TESTING}) {
     my $importer = Catmandu::Importer::Blacklight->new(
