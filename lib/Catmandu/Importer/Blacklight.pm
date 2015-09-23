@@ -23,17 +23,17 @@ sub generator {
     my ($self) = @_;
 
     sub {
-        state $page     = 1;
-        state $response = $self->query($self->q(),$page);
+        state $response = $self->query($self->q(),1);
         state $idx      = 0;
+
+        unless (defined($response)) {
+            print STDERR "Catmandu::Importer::Blacklight no response from: " . $self->url . "\n";
+            return undef;
+        }
 
         if (defined $response && ! defined $response->{docs}->[$idx]) {
             $response = $self->query($self->q(),$response->{pages}->{next_page});
             $idx = 0;  
-        }
-        
-        if ($page == 1 && $idx == 0 && ! defined($response)) {
-            print STDERR "Catmandu::Importer::Blacklight no response from: " . $self->url . "\n";
         }
 
         return unless defined($response->{docs}->[0]);
