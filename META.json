@@ -52,6 +52,20 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/LibreCat/Catmandu-Blacklight/issues"
+      },
+      "homepage" : "https://github.com/LibreCat/Catmandu-Blacklight",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/LibreCat/Catmandu-Blacklight.git",
+         "web" : "https://github.com/LibreCat/Catmandu-Blacklight"
+      }
+   },
+   "version" : "0.01",
+   "x_contributors" : [
+      "Patrick Hochstenbach <patrick.hochstenbach@ugent.be>"
+   ]
 }
 
