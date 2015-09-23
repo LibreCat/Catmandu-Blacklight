@@ -27,22 +27,21 @@ sub generator {
         state $response = $self->query($self->q(),$page);
         state $idx      = 0;
 
-          if (defined $response && ! defined $response->{docs}->[$idx]) {
-              $response = $self->query($self->q(),$response->{pages}->{next_page});
-              $idx = 0;
-              
-          }
+        if (defined $response && ! defined $response->{docs}->[$idx]) {
+            $response = $self->query($self->q(),$response->{pages}->{next_page});
+            $idx = 0;  
+        }
         
-        if ($page == 1 && ! defined($response)) {
+        if ($page == 1 && $idx == 0 && ! defined($response)) {
             print STDERR "Catmandu::Importer::Blacklight no response from: " . $self->url . "\n";
         }
 
         return unless defined($response->{docs}->[0]);
 
-          my $doc = $response->{docs}->[$idx];
-          my $id  = $doc->{id};
+        my $doc = $response->{docs}->[$idx];
+        my $id  = $doc->{id};
 
-          $idx++;
+        $idx++;
 
         { '_id' => $id , %$doc};
     };
