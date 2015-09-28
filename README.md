@@ -29,7 +29,7 @@ Patrick Hochstenbach, `<patrick.hochstenbach at ugent.be>`
 
 # LICENSE AND COPYRIGHT
 
-Copyright 2015 Ghent University Library
+Copyright 2015 Patrick Hochstenbach
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
