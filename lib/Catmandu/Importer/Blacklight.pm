@@ -58,7 +58,7 @@ sub query {
     return undef unless ($response->responseCode eq '200');
 
     my $json   = $response->responseContent;
-    my $perl   = from_json($json , { utf8 => 1 });
+    my $perl   = decode_json($json , { utf8 => 1 });
 
     $perl->{response};
 }
