@@ -39,6 +39,7 @@
          "requires" : {
             "Catmandu" : "0.9",
             "IO::Socket::SSL" : "1.993",
+            "JSON::MaybeXS" : "1.003005",
             "REST::Client" : "0",
             "perl" : "v5.10.1"
          }

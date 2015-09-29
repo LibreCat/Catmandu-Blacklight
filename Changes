@@ -1,7 +1,8 @@
 Revision history for Catmandu-Blacklight
 
 {{$NEXT}}
-
+	- Fixing JSON to JSON::MaybeXS
+	
 0.02  2015-09-28 10:10:25 CEST
 	- Fixing empty test
 	

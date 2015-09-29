@@ -4,7 +4,7 @@ use Catmandu::Sane;
 use Catmandu::Util qw(:is);
 use REST::Client;
 use URI::Escape;
-use JSON;
+use JSON::MaybeXS;
 use Moo;
 use feature 'state';
 
