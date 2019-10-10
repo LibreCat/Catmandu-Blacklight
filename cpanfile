@@ -9,6 +9,8 @@ on 'test', sub {
 
 requires 'Catmandu', '>=0.9';
 requires 'REST::Client', '0';
+requires 'Moo', '0';
+requires 'URI::Escape', '0';
 requires 'JSON::MaybeXS', '>=1.003005';
 
 # Need recent SSL to talk to https endpoint correctly
