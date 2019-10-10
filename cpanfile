@@ -7,7 +7,7 @@ on 'test', sub {
   requires 'Test::Pod','0';
 };
 
-requires 'Catmandu', '>=0.9';
+requires 'Catmandu', '1.2001';
 requires 'REST::Client', '0';
 requires 'Moo', '0';
 requires 'URI::Escape', '0';
