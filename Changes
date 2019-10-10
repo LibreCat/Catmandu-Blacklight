@@ -1,6 +1,8 @@
 Revision history for Catmandu-Blacklight
 
 {{$NEXT}}
+
+0.04  2019-10-10 21:02:50 CEST
     - Fixing dependencies
     
 0.03  2015-09-29 10:12:15 CEST
